@@ -23,9 +23,9 @@
         <div class="flex-1 grid grid-cols-4 gap-10">
             <template x-for="card in cards">
                 <div>
-                    <button x-show="!card.cleared" :style="'background: '+ (card.flipped ? card.color : '#999')"
+                    <div x-show="!card.cleared" :class="(card.flipped) ? 'bg-' + card.color + '-600' : 'bg-gray-500'"
                         class="w-full h-32 cursor-pointer" @click="flipCard(card)">
-                    </button>
+                    </div>
                 </div>
             </template>
         </div>
